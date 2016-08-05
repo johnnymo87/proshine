@@ -81,7 +81,7 @@ namespace BrightNetwork
                 {
                     if (_socket != null)
                     {
-                        _socket.Close();
+                        _socket.Dispose();
                     }
                 }
                 catch (Exception ex)
