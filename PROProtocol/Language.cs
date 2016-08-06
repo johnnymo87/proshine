@@ -26,7 +26,7 @@ namespace PROProtocol
             if (File.Exists(FileName))
             {
                 XmlDocument xml = new XmlDocument();
-                xml.Load(FileName);
+                xml.Load(File.OpenWrite(FileName));
                 LoadXmlDocument(xml);
             }
         }

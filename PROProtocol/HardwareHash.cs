@@ -17,7 +17,7 @@ namespace PROProtocol
         public static string GenerateRandom()
         {
             StringBuilder mac = new StringBuilder();
-            using (RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider())
+            using (RandomNumberGenerator rng = RandomNumberGenerator.Create())
             {
                 byte[] random = new byte[16];
                 rng.GetBytes(random);
